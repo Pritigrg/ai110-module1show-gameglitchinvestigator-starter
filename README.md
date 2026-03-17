@@ -27,15 +27,22 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ### 🎯 Game Purpose
 
-The **Game Glitch Investigator** is a number-guessing game built with Streamlit. The player selects a difficulty level — **Easy** (1–20, 6 attempts), **Normal** (1–100, 8 attempts), or **Hard** (1–200, 5 attempts) — and tries to guess a hidden secret number.
+The Game Glitch Investigator is a number-guessing game built with Streamlit. Players choose a difficulty level:
 
-After each guess, the game provides a **"Go HIGHER!"** or **"Go LOWER!"** hint to guide the player toward the answer. Wrong guesses deduct **5 points** from the score, while a correct guess awards `100 − (10 × attempt number)` points — rewarding players who figure it out sooner.
+1) Easy: numbers from 1–20 with 6 attempts
 
-The catch: an AI wrote the original code and introduced several bugs that made the game completely **unwinnable**.
+2) Normal: numbers from 1–100 with 8 attempts
+
+3) Hard: numbers from 1–200 with 5 attempts
+
+The goal is to guess a hidden secret number before running out of attempts.
+
+After each guess, the game gives a hint , either “Go HIGHER!” or “Go LOWER!” — to help guide the player in the right direction.
+
 
 ---
 
-### 🐛 Bugs Found
+###  Bugs Found
 
 1. **Hints were reversed** — The Higher/Lower hints pointed the wrong way. Guessing too high told you to go higher, and guessing too low told you to go lower.
 2. **Hard mode was too easy** — Hard had a range of 1–50, which was actually smaller than Normal's 1–100.
